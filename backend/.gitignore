@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+venv/
+.venv/
+
+# Database
+*.db
+*.sqlite
+
+# Data folders
+data/cache/*
+data/thumbnails/*
+!data/cache/.gitkeep
+!data/thumbnails/.gitkeep
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store

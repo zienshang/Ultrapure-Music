@@ -1,0 +1,67 @@
+# ─── Operating systems ──────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── IDEs / editors ─────────────────────────────────────────────────────────
+.idea/
+*.iml
+.vscode/
+.fleet/
+*.swp
+*.swo
+
+# ─── Android / Gradle ───────────────────────────────────────────────────────
+**/.gradle/
+**/build/
+**/.cxx/
+**/.kotlin/
+**/captures/
+**/.externalNativeBuild/
+
+# SDK / NDK locations are machine-specific
+local.properties
+
+# Android Studio profiling
+*.hprof
+
+# ─── Python / FastAPI backend ───────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# ─── Secrets & environment ─────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# Firebase config — per-developer (download from Firebase Console)
+**/google-services.json
+!**/google-services.json.example
+
+# ─── Local databases / caches / generated data ─────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+backend/data/cache/*
+backend/data/thumbnails/*
+!backend/data/cache/.gitkeep
+!backend/data/thumbnails/.gitkeep
+
+# ─── Logs ───────────────────────────────────────────────────────────────────
+*.log
+logs/

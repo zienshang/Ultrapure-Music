@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Network -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Background playback -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+
+    <!-- Wake lock for background playback -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Storage for offline cache (API < 29) -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <!-- Post notifications (Android 13+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Receive boot completed to restart service -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".UltrapureMusicApp"
+        android:allowBackup="true"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UltrapureMusic"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Music playback foreground service -->
+        <service
+            android:name=".service.MusicService"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="androidx.media3.session.MediaSessionService" />
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+
+        <!-- Home screen widget -->
+        <receiver
+            android:name=".widget.MusicWidget"
+            android:exported="true"
+            android:label="@string/widget_description">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_music_info" />
+        </receiver>
+
+        <!-- Widget action receiver (play/pause/skip from widget buttons) -->
+        <receiver
+            android:name=".widget.WidgetActionReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.ultrapuremusic.widget.PLAY_PAUSE" />
+                <action android:name="com.ultrapuremusic.widget.PREV" />
+                <action android:name="com.ultrapuremusic.widget.NEXT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Android Auto / Automotive OS media app descriptor -->
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>

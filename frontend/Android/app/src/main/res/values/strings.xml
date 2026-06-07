@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ultrapure Music</string>
+    <string name="widget_description">Điều khiển phát nhạc nhanh từ màn hình chính</string>
+    <string name="widget_prev">Bài trước</string>
+    <string name="widget_play_pause">Phát / Dừng</string>
+    <string name="widget_next">Bài tiếp theo</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<automotiveApp xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+        Declares this app as a media app for Android Auto / Automotive OS.
+        The MediaSessionService (MusicService) exposes playback controls via
+        MediaSession, which Auto surfaces automatically.
+    -->
+    <uses name="media" />
+</automotiveApp>

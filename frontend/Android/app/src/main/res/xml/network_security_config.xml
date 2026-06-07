@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Allows cleartext HTTP only to local development hosts.
+    In production, remove the domain-config entries or replace with HTTPS endpoints.
+-->
+<network-security-config>
+    <!-- Allow cleartext to Android emulator host (10.0.2.2 = developer machine) -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">10.0.2.2</domain>
+    </domain-config>
+    <!-- Allow cleartext to physical device / same-network server -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">192.168.1.1</domain>
+    </domain-config>
+    <!-- Allow cleartext to localhost -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
+    <!-- All other traffic must use HTTPS -->
+    <base-config cleartextTrafficPermitted="false" />
+</network-security-config>

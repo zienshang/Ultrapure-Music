@@ -1,0 +1,48 @@
+{
+  "_comment": "Sample structure. Replace with your real google-services.json downloaded from Firebase Console → Project Settings → Your apps → Android app (com.ultrapuremusic) → Download google-services.json. The real file is .gitignored.",
+  "project_info": {
+    "project_number": "YOUR_PROJECT_NUMBER",
+    "project_id": "your-project-id",
+    "storage_bucket": "your-project-id.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:YOUR_PROJECT_NUMBER:android:YOUR_APP_ID_HASH",
+        "android_client_info": {
+          "package_name": "com.ultrapuremusic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "YOUR_PROJECT_NUMBER-ANDROID_CLIENT_ID.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ultrapuremusic",
+            "certificate_hash": "YOUR_DEBUG_SHA1_LOWERCASE_NO_COLONS"
+          }
+        },
+        {
+          "client_id": "YOUR_PROJECT_NUMBER-WEB_CLIENT_ID.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "YOUR_FIREBASE_ANDROID_API_KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "YOUR_PROJECT_NUMBER-WEB_CLIENT_ID.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
