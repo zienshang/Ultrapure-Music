@@ -1,19 +1,8 @@
-<p align="center">
-  <img src="screenshots/homescreen.png" alt="Home" width="185"/>
-  <img src="screenshots/playerscreen.png" alt="Player" width="185"/>
-  <img src="screenshots/search.png" alt="Search" width="185"/>
-  <img src="screenshots/library.png" alt="Library" width="185"/>
-  <img src="screenshots/profile.png" alt="Profile" width="185"/>
-  <img src="screenshots/setting.png" alt="Settings" width="185"/>
-</p>
-
 <h1 align="center">Ultrapure Music</h1>
 
 <p align="center">
-  <strong>A self-hosted personal music streaming app powered by YouTube</strong>
-</p>
-
-<p align="center">
+  A self-hosted personal music streaming app powered by YouTube
+  <br>
   Stream any track • Sync your playlists • Discover trending music • Taste-based recommendations
   <br>
   All wrapped in a dark glassmorphism UI.
@@ -26,6 +15,15 @@
   <img src="https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi&logoColor=white"/>
   <img src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/SQLite-aiosqlite-003B57?logo=sqlite&logoColor=white"/>
+</p>
+
+<p align="center">
+  <img src="screenshots/homescreen.png" alt="Home" width="185"/>
+  <img src="screenshots/playerscreen.png" alt="Player" width="185"/>
+  <img src="screenshots/search.png" alt="Search" width="185"/>
+  <img src="screenshots/library.png" alt="Library" width="185"/>
+  <img src="screenshots/profile.png" alt="Profile" width="185"/>
+  <img src="screenshots/setting.png" alt="Settings" width="185"/>
 </p>
 
 <hr>
