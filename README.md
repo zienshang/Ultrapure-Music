@@ -30,12 +30,12 @@ A personal music streaming Android app powered by YouTube — stream any track, 
 Upload your screenshots to the `screenshots/` folder and they will appear here:
 
 <p align="center">
-  <img src="screenshots/home.png" alt="Home screen" width="200"/>
-  <img src="screenshots/player.png" alt="Player screen" width="200"/>
+  <img src="screenshots/homescreen.png" alt="Home screen" width="200"/>
+  <img src="screenshots/playerscreen.png" alt="Player screen" width="200"/>
   <img src="screenshots/search.png" alt="Search screen" width="200"/>
   <img src="screenshots/library.png" alt="Library screen" width="200"/>
-  <img src="screenshots/player_full.png" alt="Full-screen player" width="200"/>
-  <img src="screenshots/settings.png" alt="Settings" width="200"/>
+  <img src="screenshots/profile.png" alt="Profile" width="200"/>
+  <img src="screenshots/setting.png" alt="Settings" width="200"/>
 </p>
 
 ---
